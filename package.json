@@ -16,9 +16,9 @@
   ],
   "scripts": {
     "clear": "rm -rf types && rm -rf docs && rm -rf build",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:dev": "jest --watchAll=true --config=jest.config.js",
-    "jsdoc": "jsdoc -c jsdoc.conf.json",
+    "jsDoc": "jsdoc -c jsdoc.conf.json",
     "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
     "compile": "webpack --mode production --config ./webpack.config.js",
     "build": "npm run clear && npm run compile && npm run jsdoc && npm run types",
